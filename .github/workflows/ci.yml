@@ -242,8 +242,3 @@ jobs:
     - name: "Marker for end of build"
       shell: pwsh
       run: echo "Build is done"
-
-      sign:
-  name: Sign Package
-  if: ${{ github.event_name == 'push' && github.repository == 'unoplatform/uno.templates' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')) }}
-  # این شرط فقط اجازه اجرا روی ریپوی اصلی را می‌دهد
